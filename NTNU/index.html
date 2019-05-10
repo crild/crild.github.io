@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Charles Rutherford Ildstad</title>
+		<meta name="description" content="Charles Rutherford Ildstad" />
+		<meta name="keywords" content="Charles Rutherford Ildstad, NTNU, CV, Personal Page, Folk" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+	</head>
+	<body>
+		<div class="container">	
+			<header>
+				<h1>Charles Rutherford Ildstad <span>personal web page</span></h1>	
+			</header>
+			<div class="main clearfix">
+				<nav id="menu" class="nav">					
+					<ul>
+						<li>
+							<a href="#">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-home"></i>
+								</span>
+								<span>Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="artikler/artikler.html">
+								<span class="icon"> 
+									<i aria-hidden="true" class="icon-services"></i>
+								</span>
+								<span>Articles</span>
+							</a>
+						</li>
+						<li>
+							<a href=CV/CV.html>
+								<span class="icon">
+									<i aria-hidden="true" class="icon-portfolio"></i>
+								</span>
+								<span>Resumé</span>
+							</a>
+						</li>
+						<li>
+							<a href="kontakt/kontakt.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+								<span>Contact</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div><!-- /container -->
+		<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+		</script>
+		<section>
+			<div>
+				<ul class="img-list">
+					<li>
+						<a href="http://no.linkedin.com/in/crildstad">
+						<img src="charlesi.jpg" alt=“Charles Rutherford Ildstad”></img>
+						<span class="text-content"><span>Check me out on LinkedIn!</span></span>
+						</a>
+					</li>
+				</ul>
+				<font color=#444>Field of study:</font><br> &nbsp &nbsp Geotechnical Engineering (Tekniske Geofag), 3rd year,<br><br>
+				<font color=#444>Current employment:</font><br> &nbsp &nbsp Teaching Assistant - TPG4100 Physics and geophysics, TTK4105 Control Systems,<br> &nbsp &nbsp Research Assistant - IFY Department of Physics <br> &nbsp &nbsp Summer Internships(2016) - Statoil(June 13th-August 5th), Lundin Norway(August 8th-September 2nd)<br><br>
+				<font color=#444>About me:</font><br> &nbsp &nbsp I am currently pursuing an engineering degree (M.Sc.) from the Norwegian University of Science and Technology (NTNU) and my interests include applied mathematics and geophysics in the petroleum and minings sectors. I plan to write my masters thesis on applied geophysics and mathematics in the off-shore mining industry, more specifically on the possibility of using swarm technology to explore mineral resources in the vicinity of Mid-Ocean Ridges(MORs). <br> &nbsp &nbsp I am very interested in the possibilities of resource recovery through deep sea mining and unconventional petroleum reservoirs, like the ones in the arctic, and the special technological requirements and challenges related to the exploration and production of these. <br> &nbsp &nbsp Currently I’m working towards taking my 4th year abroad and have been granted the Fulbright scholarship for educational exchange in order to achieve this. I enjoy playing basketball, playing the guitar and participating in engineering and academic competitions, both individually and along with my classmates at NTNU. <br><br>
+				<center> Feel free to contact me with any enquiries or feedback you may have! </center>
+			</div>
+		</section>
+		<section>
+		
+		</section>
+	<div id="fixedfooter">
+		<a class="different" href="http://no.linkedin.com/in/crildstad">
+			View Charles' profile on LinkedIn
+		</a>
+	</div>
+	</body>
+</html>

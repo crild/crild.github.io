@@ -1,0 +1,278 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 15px; padding: 0; margin: 0;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #89867e;
+	background: #f9f9f9;
+}
+
+a {
+	color: #444;
+}
+
+a:link {
+	colour: #444;
+	text-decoration:none;
+}
+
+a:visited {
+	color: #666999;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+a:active {
+	color: purple;
+	text-decoration: underline;
+}
+
+.main,
+.container > header {
+	width: 100%;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.main {
+	max-width: 82.667em;
+	min-height: 3em;
+}
+
+.container > header {
+	text-align: center;
+	font-size: 16px;
+	padding: 2em 2em 2em;
+	background: rgba(0,0,0,0.01);
+}
+
+.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.container > header span {
+	display: block;
+	font-size: 60%;
+	color: #ceccc6;
+	padding: 0 0 0 0;
+}
+
+/* Header Style */
+.charlesi-top {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.4);
+	text-transform: uppercase;
+	position: relative;
+	width: 100%;
+	font-size: 0.7em;
+	line-height: 2.2;
+}
+
+.charlesi-top a {
+	padding: 0 1em;
+	letter-spacing: 0.1em;
+	color: #888;
+	display: inline-block;
+}
+
+.charlesi-top a:hover {
+	background: rgba(255,255,255,0.9);
+}
+
+.charlesi-top span.right {
+	float: right;
+}
+
+.charlesi-top span.right a {
+	float: left;
+	display: block;
+}
+
+.charlesi-icon:before {
+	font-family: 'codropsicons';
+	margin: 0 4px;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.charlesi-icon-drop:before {
+	content: "\e001";
+}
+.charlesi-icon-prev:before {
+	content: "\e004";
+}
+.charlesi-icon-archive:before {
+	content: "\e002";
+}
+.charlesi-icon-next:before {
+	content: "\e000";
+}
+.charlesi-icon-about:before {
+	content: "\e003";
+}
+
+@media screen and (max-width: 25em) { 
+	.charlesi-icon span {
+		display: none;
+	}
+	.container > header {
+		font-size: 75%;
+	}
+
+}
+
+tbody {
+	height: 226px;
+	width: 200px;
+}
+
+table, td {
+	padding: 2px;
+	border-radius: 2px 2px;
+	padding: 0.5em
+}
+
+img.linked {
+	display: block;
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: 0px;
+}
+
+a.different {
+	text-align:center;
+	color:white;
+}
+
+a.different:hover {
+	text-decoration: underline
+}
+
+/* Formatting the footer */
+
+div#fixedfooter {
+	position:fixed;
+	text-align:center;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+	padding:5px;
+	display: block;
+}
+
+/* Formatting the Picture */
+
+ul.img-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+ul.img-list li {
+	display: inline-block;
+	height: 226px;
+	width: 200px;
+	margin: auto;
+	float: left;
+	margin: 0 1em 0 0;
+	position: relative;
+}
+
+span.text-content {
+	background: rgba(0,0,0,0.5);
+	color: white;
+	cursor: pointer;
+	display: table;
+	height: 226px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 200px;
+}
+
+span.text-content span {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+span.text-content {
+	background: rgba(0,0,0,0.5);
+	color: white;
+	cursor: pointer;
+	display: table;
+	height: 226px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 200px;
+	opacity: 0;
+}
+
+ul.img-list li:hover span.text-content {
+	opacity: 1;
+}
+
+span.text-content {
+	background: rgba(0,0,0,0.5);
+	color: white;
+	cursor: pointer;
+	display: table;
+	height: 226px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 200px;
+	opacity: 0;
+	-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
+}
+
+section {
+	padding-left: 15px;
+	padding-bottom: 20px;
+}
+
+p{
+	text-align:center;
+	vertical-align: middle;
+}
+
+b{
+	color: #444
+}
